@@ -26,9 +26,22 @@ const getAll = async (token) => {
   return response.data;
 };
 
+const getOneById = async (ticketId, token) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+
+  const response = await axios.get(`${API_URL}/${ticketId}`, config);
+
+  return response.data;
+};
+
 const ticketService = {
   create,
   getAll,
+  getOneById,
 };
 
 export default ticketService;
