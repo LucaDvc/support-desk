@@ -25,7 +25,7 @@ function NewTicket() {
           <input type='text' className='form-control' value={name} disabled />
         </div>
         <div className='form-group'>
-          <label htmlFor='name'>Customer Email</label>
+          <label htmlFor='email'>Customer Email</label>
           <input type='text' className='form-control' value={email} disabled />
         </div>
         <form onSubmit={onSubmit}>
